@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lire les réponses</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,900&family=Caveat:wght@500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/demos.css">
+</head>
+<body>
+  <header class="barre-haut">
+    <div class="barre-ligne">
+      <a class="logo" href="index.html" style="text-decoration:none">Réponses</a>
+      <nav class="onglets"><a href="index.html">← Questionnaire</a></nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="hero-sur">Résultats</p>
+      <h1 class="hero-titre" id="titre">Ouvre un fichier de réponses</h1>
+      <label class="depot" id="depot">
+        <input type="file" id="fichier" accept=".json,application/json">
+        Glisse le fichier <b>.json</b> ici, ou clique pour le choisir.
+      </label>
+      <p class="hero-note" id="erreur" hidden></p>
+    </section>
+
+    <div id="resultats" hidden>
+      <section class="section">
+        <header class="section-tete"><h2>En résumé</h2></header>
+        <div class="recap" id="resume"></div>
+      </section>
+      <section class="section">
+        <header class="section-tete"><h2>Portfolios</h2><p>Du mieux noté au moins bien noté.</p></header>
+        <div id="res-p"></div>
+      </section>
+      <section class="section">
+        <header class="section-tete"><h2>Directions artistiques</h2><p>Du mieux noté au moins bien noté.</p></header>
+        <div id="res-s"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="pied"><span>Les fichiers sont lus dans ton navigateur, rien n'est envoyé.</span></footer>
+
+  <script src="data/contenu.js"></script>
+  <script src="js/resultats.js"></script>
+</body>
+</html>

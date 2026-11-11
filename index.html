@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ton avis — portfolios & DA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,900&family=Caveat:wght@500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/demos.css">
+</head>
+<body>
+  <header class="barre-haut">
+    <div class="barre-ligne">
+      <span class="logo" id="site-nom"></span>
+      <nav class="onglets">
+        <a href="#portfolios">Portfolios <span id="nb-p"></span></a>
+        <a href="#styles">DA <span id="nb-s"></span></a>
+        <a href="#fin" class="onglet-fin">Terminer</a>
+      </nav>
+    </div>
+    <div class="progression" aria-hidden="true"><span id="progression"></span></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="hero-sur" id="site-surtitre"></p>
+      <h1 class="hero-titre" id="site-accroche"></h1>
+      <div class="hero-texte" id="site-intro"></div>
+      <ol class="etapes">
+        <li><b>Note</b> chaque site et chaque style de 1 à 10.</li>
+        <li><b>Précise</b> ce qui te plaît ou pas, si tu veux, et laisse un commentaire.</li>
+        <li><b>Télécharge</b> tes réponses à la fin et envoie-moi le fichier.</li>
+      </ol>
+      <p class="hero-note">Tes réponses sont enregistrées automatiquement dans ce navigateur : tu peux t'arrêter et revenir plus tard.</p>
+    </section>
+
+    <section id="portfolios" class="section">
+      <header class="section-tete">
+        <p class="section-num">Partie 1</p>
+        <h2>Les portfolios</h2>
+        <p>Ouvre chaque site (clique sur l'aperçu), balade-toi un peu, puis donne ton avis.</p>
+      </header>
+      <div class="items" id="liste-p"></div>
+    </section>
+
+    <section id="styles" class="section">
+      <header class="section-tete">
+        <p class="section-num">Partie 2</p>
+        <h2>Les directions artistiques</h2>
+        <p>Chaque style a un petit aperçu. Les liens Pinterest et Dribbble montrent de vrais exemples.</p>
+        <label class="masquer"><input type="checkbox" id="masquer-notes"> Masquer ceux que j'ai déjà notés</label>
+      </header>
+      <div class="items" id="liste-s"></div>
+    </section>
+
+    <section id="fin" class="section fin">
+      <header class="section-tete">
+        <p class="section-num">Partie 3</p>
+        <h2>C'est fini !</h2>
+      </header>
+      <div class="fin-grille">
+        <div class="fin-form">
+          <label>Ton prénom
+            <input type="text" id="prenom" autocomplete="given-name">
+          </label>
+          <label>En quelques mots, qu'est-ce que tu voudrais pour ton site ?
+            <textarea id="envie" rows="5" placeholder="Ambiance, couleurs, sites qui t'inspirent…"></textarea>
+          </label>
+          <button class="bouton" id="telecharger">Télécharger mes réponses (.json)</button>
+          <p class="aide" id="aide-envoi"></p>
+          <button class="lien-discret" id="effacer">Tout effacer et recommencer</button>
+        </div>
+        <div class="recap" id="recap"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pied">
+    <span id="pied"></span>
+    <a href="resultats.html">Lire un fichier de réponses</a>
+  </footer>
+
+  <script src="data/contenu.js"></script>
+  <script src="js/questionnaire.js"></script>
+</body>
+</html>
